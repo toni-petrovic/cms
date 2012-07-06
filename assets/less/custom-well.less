@@ -1,0 +1,30 @@
+.well {
+	&.black{
+		
+		background-color: @grayDark;
+		.opacity(90);
+		.box-shadow(inset 0px 0px 1px rgba(0,0,0,.75));
+
+		.nav .nav-header {
+			color: @grayLighter;
+  			text-shadow: 0px -1px 0px @grayDarker;
+		}
+
+		.nav-list > li > a {		
+			color: @white;		 
+		  	text-shadow: 0 1px 0 @grayDarker;
+		}
+
+		.nav-list > li > a:hover {					
+		  	background-color: @grayDarker;
+		}
+
+		.nav-list > .active > a,
+		.nav-list > .active > a:hover {
+			color: @white;
+  			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  			background-color: @orange;
+		}
+
+	}
+}

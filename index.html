@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/less/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">    
+    
+    <link href="assets/css/top-header.css" rel="stylesheet">    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <style type="text/css">
+    .sidebar-nav {
+        padding: 9px 0;
+    }
+
+    .input-prepend.warning .active ,
+    .input-append.warning .active {
+      background-color: #F89406;
+      border-color: #bd362f #bd362f #802420;
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    }
+
+
+
+body {
+    background:
+        transparent 
+        url(http://lh5.ggpht.com/pilZNAgFCYoUSmAiq0BpedCPTqSORcIAgaf9qOfndi1EdPkN0eVnAOD9PhTK8YI=s1920-e365) 
+        no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.title-bar{    
+    /*padding-bottom: 7px;*/
+    margin-top: 18px; margin-bottom: 18px;
+    /*border-bottom: 1px solid #EEE;*/
+}
+
+.title-bar h1{
+    float:left;
+    color: #FFF;    
+}
+
+.title-bar .control-group, .title-bar .input-append{
+    margin-bottom:0;
+}
+
+.title-bar ul {
+    margin:0; padding:0;
+    list-style: none;    
+}
+
+.title-bar li {
+    display: block;
+    float: right;
+    margin-right: 18px;
+}
+
+.title-bar li.left {
+    float:left;
+}
+
+.title-bar li.last {
+    margin-right:0px;
+}
+
+.title-bar li.button {
+    padding-top:4px;
+}
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="top-header">
+    
+        <div class="container">
+            
+            <div class="top-header-top clearfix">
+                
+                <ul class="nav nav-pills pull-right">
+                    <li>
+                        <a href="#"><i class="icon-globe"></i> View Website</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i> John Smith <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="profile.html">Your Profile</a></li>
+                            <li class="active"><a href="form.html">Account Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <h1><i class="icon-bookmark icon-large"></i> CMS :: UI Project</h1>
+                
+            </div>
+            
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="container">
+                    
+                        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        
+                        <div class="nav-collapse">
+                        <ul class="nav">
+                            <li>
+                                <a href="index.html"><i class="icon-home"></i> Dashboard</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-sitemap"></i> Website <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">Pages</a></li>
+                                    <li><a href="listing.html">Menus</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-shopping-cart"></i> Store <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">Catalogue</a></li>
+                                    <li><a href="orders.html">Orders</a></li>
+                                    <li><a href="listing.html">Enquiries</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-signal"></i> Reports <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="report.html">Sales Reports</a></li>
+                                    <li><a href="report.html">Product Popularity</a></li>
+                                    <li><a href="report.html">Member Registrations</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-group"></i> Members <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">Members</a></li>
+                                    <li><a href="listing.html">User Groups</a></li>
+                                    <li><a href="listing.html">Permissions</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-cogs"></i> Settings <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">Payment Processors</a></li>
+                                    <li><a href="listing.html">Order Statuses</a></li>
+                                    <li><a href="listing.html">Shipping Methods</a></li>
+                                    <li><a href="listing.html">Emails</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li><a href="#"><i class="icon-bullhorn"></i> Alerts<span class="badge badge-info">2</span></a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-info-sign"></i> Help <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="content.html">FAQ</a></li>
+                                    <li class="active"><a href="content.html">User Guide</a></li>
+                                    <li><a href="content.html">Support</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <div class="container">
+
+        <section id="mainContent">
+
+            <div class="row">
+                <div class="span12 title-bar">
+                    <ul>
+                        <li class="button last">
+                            <div class="control-group warning">
+                                <div class="input-append warning">                        
+                                    <input class="span2 " id="appendedInputButtons" size="16" type="text"><button class="btn btn-warning" type="button"><i class="icon-search icon-white"></i></button><button class="btn btn-warning advanced-search" type="button" data-toggle="button"><i class="icon-filter icon-white"></i></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="button"><a class="btn btn-primary" href="#"><i class="icon-plus-sign icon-white"></i> Add new</a></li>
+                        <li class="left"><h1>Settings / Something</h1></li>
+                    </ul>                    
+                </div>            
+            </div>            
+
+            <div class="row">
+                
+                <div id="sidebar" class="span3">
+                    
+                    <div class="well black sidebar-nav">
+                        
+                        <ul class="nav nav-list">
+                            <li class="nav-header">List header</li>
+                            <li class="active"><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
+                            <li><a href="#"><i class="icon-book"></i> Library</a></li>
+                            <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+                            <li class="nav-header">Another list header</li>
+                            <li><a href="#"><i class="icon-user"></i> Profile</a></li>
+                            <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-flag"></i> Help</a></li>
+                        </ul>
+
+                    </div><!--/.well -->
+
+                </div><!--/span-->
+
+                <div id="content" class="span9">
+
+                    <div style="display:none" id="advanced-search-form" class="well">                      
+                      <h3>Search</h3>
+                      <hr/>                      
+                      <form class="">
+                        
+                        <div class="row-fluid">
+                            
+                            <fieldset class="span6">
+                              <label>Label name</label>
+                              <input type="text" class="span3" placeholder="Type something…">
+                              <span class="help-block">Example block-level help text here.</span>
+                              <label class="checkbox">
+                                <input type="checkbox"> Check me out
+                              </label>
+                            </fieldset>
+                            
+                            <fieldset class="span6">
+                                <label>Label name</label>
+                                  <input type="text" class="span6" placeholder="Type something…">
+                                  <span class="help-block">Example block-level help text here.</span>
+                                  <label class="checkbox">
+                                    <input type="checkbox"> Check me out
+                                  </label>
+                            </fieldset>
+                            <fieldset class="span12">
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <button class="btn">Cancel</button>
+                                  </div>
+                            </fieldset>
+                        </div>
+                        
+                      </form>
+                    </div>
+
+                    <div class="well">
+
+                        <h1>Products list</h1>
+                        <hr>
+                        <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                          <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                        <div class="pagination pagination-right">
+                            <ul>
+                                <li class="disabled"><a href="#">«</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <address>
+                <strong>Twitter, Inc.</strong><br>
+                795 Folsom Ave, Suite 600<br>
+                San Francisco, CA 94107<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>            
+        </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+    <script type="text/javascript">
+
+     var $win = $(window)
+      , $nav = $('.navbar')
+      , navTop = $('.navbar').length && $('.navbar').offset().top - 0
+      , isFixed = 0
+
+    $nav.on('click', function () {
+      if (!isFixed) setTimeout(function () {  $win.scrollTop($win.scrollTop() - 47) }, 10)
+    });
+
+    $win.on('scroll', processScroll);
+
+    function processScroll() {
+        var i, scrollTop = $win.scrollTop();
+        if (scrollTop >= navTop && !isFixed) {
+            isFixed = 1;
+            $nav.addClass('navbar-fixed-top');
+        } else if (scrollTop <= navTop && isFixed) {
+            isFixed = 0;
+            $nav.removeClass('navbar-fixed-top');
+        }
+    }
+
+    $('.advanced-search').live('click', function (e) {           
+        e.preventDefault();        
+        //$(this).toggleClass('active');
+        $("#advanced-search-form").toggle();
+    }); /* end - cancel */
+
+    </script>
+
+  </body>
+</html>

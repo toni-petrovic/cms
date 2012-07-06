@@ -1,0 +1,90 @@
+.top-header {
+    position: relative;
+    z-index: 1;
+    padding: 30px 0 10px 0;
+    /*background-color: #282828;*/
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.28);
+       -moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.28);
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.28);
+}
+
+.top-header h1 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #DDD;
+    text-shadow: 0px 1px 1px #000;
+    margin-bottom: 0;
+    font-family: "Oxygen", sans-serif;
+    margin-left: 2px;
+}
+
+.top-header .nav-pills li a.dropdown-toggle .caret {
+    border-top-color: #DDD;
+    border-bottom-color: #DDD;
+}
+
+.top-header .nav-pills li a {
+    color: #CCC;
+}
+
+.top-header .nav-pills li a:hover {
+    color: #DDD;
+}
+
+.top-header .nav-pills li a:hover {
+    background: none;
+}
+
+.top-header .nav-pills .open .dropdown-toggle {
+    background-color: transparent;
+}
+
+.top-header .nav-pills li .dropdown-menu li a {
+    color: #666;
+}
+
+.top-header .nav-pills li .dropdown-menu li a:hover {
+    background: #F8F8F8;
+}
+
+.top-header .nav-pills li .dropdown-menu li.active a {
+    background: #EEE;
+}
+
+.top-header .nav-pills .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #FFF;
+  position: absolute;
+  top: -7px;
+  left: 9px;
+}
+
+.top-header .nav-pills.pull-right .dropdown-menu,
+.top-header .nav-pills .dropdown-menu.pull-right {
+  left: auto;
+  right: 0;
+}
+.top-header .nav-pills.pull-right .dropdown-menu:before,
+.top-header .nav-pills .dropdown-menu.pull-right:before {
+  left: auto;
+  right: 12px;
+}
+.top-header .nav-pills.pull-right .dropdown-menu:after,
+.top-header .nav-pills .dropdown-menu.pull-right:after {
+  left: auto;
+  right: 13px;
+}
+
+.top-header .navbar li {
+    position: relative;
+}
+
+.top-header .navbar li .badge {
+    position: absolute;
+    bottom: -8px;
+    left: 15px;
+}

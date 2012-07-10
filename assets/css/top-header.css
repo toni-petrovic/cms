@@ -57,10 +57,11 @@
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-bottom: 7px solid #FFF;
+  border-bottom: 7px solid #F8F8F8;
   position: absolute;
   top: -7px;
   left: 9px;
+
 }
 
 .top-header .nav-pills.pull-right .dropdown-menu,
@@ -68,15 +69,19 @@
   left: auto;
   right: 0;
 }
+
 .top-header .nav-pills.pull-right .dropdown-menu:before,
 .top-header .nav-pills .dropdown-menu.pull-right:before {
   left: auto;
   right: 12px;
+  border-bottom-color: #666;
 }
+
 .top-header .nav-pills.pull-right .dropdown-menu:after,
 .top-header .nav-pills .dropdown-menu.pull-right:after {
   left: auto;
   right: 13px;
+  border-bottom-color: #666;
 }
 
 .top-header .navbar li {

@@ -1,30 +1,245 @@
-.well {
-	&.black{
-		
-		background-color: @grayDark;
-		.opacity(90);
-		.box-shadow(inset 0px 0px 1px rgba(0,0,0,.75));
+@textColor: @black;
+@dropdownBackground: rgba(75,75,75,.9);
+@dropdownLinkBackgroundHover: @orange;
+@dropdownLinkColor: @white;
 
-		.nav .nav-header {
-			color: @grayLighter;
-  			text-shadow: 0px -1px 0px @grayDarker;
+.no-margin{ margin:0px !important; }
+.no-margin-top{ margin-top:0px !important; }
+.no-margin-right{ margin-right:0px !important; }
+.no-margin-bottom{ margin-bottom:0px !important; }
+.no-margin-left{ margin-left:0px !important;}
+
+.no-padding{ padding:0px !important; }
+.no-padding-top{ padding-top:0px !important; }
+.no-padding-right{ padding-right:0px !important; }
+.no-padding-bottom{ padding-bottom:0px !important; }
+.no-padding-left{ padding-left:0px !important; }
+
+.push-right {
+	text-align:right !important;
+}
+
+.push-center {
+	text-align:center !important;
+}
+
+.action-column {
+	width: 65px;
+}
+
+.bulk-column {
+	width: 35px;
+}
+
+.action-buttons > .action-button:first-child {
+	margin-left: 0px !important;
+}
+
+.bulk-actions{
+	float: left;
+}
+
+.pagination-actions {
+	float: right;
+}
+
+.bulk-actions-form .table tr td:first-child, .bulk-actions-form .table tr td:last-child,
+.bulk-actions-form .table tr th:first-child, .bulk-actions-form .table tr th:last-child {	
+		text-align:center;	
+}
+
+.theme-black {
+
+	a {
+		&.action-button {
+			margin-left: 5px;
+			color: @gray;
+			text-decoration:none;			
 		}
-
-		.nav-list > li > a {		
-			color: @white;		 
-		  	text-shadow: 0 1px 0 @grayDarker;
+		&.action-button:hover{
+			color: @grayDarker;
 		}
-
-		.nav-list > li > a:hover {					
-		  	background-color: @grayDarker;
-		}
-
-		.nav-list > .active > a,
-		.nav-list > .active > a:hover {
-			color: @white;
-  			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  			background-color: @orange;
-		}
-
 	}
+	
+	.dropdown-menu {		
+		border:1px solid @dropdownBackground;
+		.box-shadow(0px 0px 10px rgba(0,0,0,.9));
+		
+		li > a:hover {
+		  #gradient > .vertical(@orange, @groundOrange);
+		}
+	}
+
+	.well {
+		&.well-form {
+			.no-margin-bottom;
+			.no-padding;
+
+			.inside-spacer{
+				padding: 20px; padding-top: 40px;
+			}
+
+			.form-horizontal {
+				.no-margin-bottom;
+				
+				.form-actions {
+					padding-left: 180px;
+					background-color: @grayLight;
+					.no-margin;
+					.border-radius(0 0 4px 4px);					
+				}
+
+			}
+		}
+	}
+	
+	.well {
+		&.themed {				
+			background-color: rgba(0,0,0,0.75);
+			margin-bottom: 18px;		
+			.box-shadow(inset 0px 0px 1px rgba(0,0,0,.75));
+
+			h1,h2,h3,h4,h5,h6{
+				color:@white;
+			}
+
+			h1{			
+				text-shadow: 0px -1px 0px @grayDarker;
+			}
+
+			/*~~~ Navigation ~~~*/
+			.nav .nav-header {
+				color: @grayLighter;
+	  			text-shadow: 0px -1px 0px @grayDarker;
+			}
+
+			.nav-list > li > a {		
+				color: @white;		 
+			  	text-shadow: 0 1px 0 @grayDarker;
+			}
+
+			.nav-list > li > a:hover {					
+			  	background-color: @grayDarker;
+			}
+
+			.nav-list > .active > a,
+			.nav-list > .active > a:hover {
+				color: @white;
+	  			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	  			background-color: @orange;
+			}
+
+			.nav-list .divider {
+				border-bottom: none;
+			}
+			/*~~~ Navigation ~~~*/
+
+
+			/*~~~ Title bar ~~~*/
+			.title-bar{    
+	   			 margin-bottom: 18px;  
+			}
+
+			.title-bar h1{
+			    float:left;
+			    color: @white;    
+			}
+
+			.title-bar .control-group, .title-bar .input-append{
+			    margin-bottom:0;
+			}
+
+			.title-bar .control-group.warning input, .title-bar .control-group.warning select, .title-bar .control-group.warning textarea {
+				color: @grayDarker;
+			}
+
+			.title-bar ul {
+			    margin:0; padding:0;
+			    list-style: none;    
+			}
+
+			.title-bar li {
+			    display: block;
+			    float: right;
+			    margin-right: 18px;
+			}
+
+			.title-bar li.left {
+			    float:left;
+			}
+
+			.title-bar li.last {
+			    margin-right:0px;
+			}
+
+			.title-bar li.button {
+			    padding-top:4px;
+			}
+			/*~~~ Title bar ~~~*/
+
+			/*~~~ Advanced search form ~~~*/
+			.advanced-search-form{
+	    		margin-bottom: 18px;
+	    		background-color: @orange;    		
+	    		.box-shadow(inset 0px 0px 3px rgba(0,0,0,.75));
+	    		.border-radius(4px);   
+
+	    		h3 {
+					background-color:@groundOrange; 
+					padding: 8px; padding-left:18px;
+					margin-bottom: 8px;
+					.box-shadow(inset 0px 2px 2px rgba(0,0,0,.75));  			
+					.border-radius(4px 4px 0 0); 
+	    		}
+
+	    		fieldset.search-fieldset{
+					margin-left:0px;
+					padding-left: 18px;
+				}
+
+	    		form {
+	    			margin: 0px;
+	    		}
+
+	    		.form-actions{
+	    			margin: 0px; margin-top: 8px;
+	    			background-color:@groundOrange;
+	    			border-top: none;
+	    			.border-radius(0 0 4px 4px);
+	    			.box-shadow(inset 0px -2px 2px rgba(0,0,0,.75));  			
+	    		} 	
+			}
+			/*~~~ Advanced search form ~~~*/
+
+			/*~~~ Pagination ~~~*/			
+				.custom-pagination {
+					.inside-spacer{
+						padding: 8px 2px 0 32px;
+					}					
+				}
+			/*~~~ Pagination ~~~*/			
+
+			.table{
+				background-color:@white;
+				tr {
+					&.selected{
+						td {
+							background-color: @warningBackground;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		margin-top: 8px;
+		padding: 18px 0 18px;
+		border-top: 1px solid #E5E5E5;
+		address {
+			color: @white;
+			margin-bottom: 0px;
+		}	
+	}
+	
 }

@@ -55,49 +55,37 @@ body {
     background-size: cover;
 }
 
-.title-bar{    
-    /*padding-bottom: 7px;*/
-    margin-top: 18px; margin-bottom: 18px;
-    /*border-bottom: 1px solid #EEE;*/
+.main-content{
+    margin-top: 24px;
 }
 
-.title-bar h1{
-    float:left;
-    color: #FFF;    
-}
 
-.title-bar .control-group, .title-bar .input-append{
-    margin-bottom:0;
-}
 
-.title-bar ul {
-    margin:0; padding:0;
-    list-style: none;    
-}
 
-.title-bar li {
-    display: block;
-    float: right;
-    margin-right: 18px;
-}
 
-.title-bar li.left {
-    float:left;
-}
+    .sidebar-nav {
+        padding: 9px 0;
+    }
 
-.title-bar li.last {
-    margin-right:0px;
-}
+    a.toggles {
+        position:fixed;
+        left:0;
+        bottom:0;
+        display:block;
+        background-color:black;
+        color:white;
+        padding:10px 20px;
+    }
 
-.title-bar li.button {
-    padding-top:4px;
-}
+    .no-sidebar {
+        margin-left:0 !important;
+    }​
 
     </style>
 
   </head>
 
-  <body>
+  <body class="theme-black">
 
     <div class="top-header">
     
@@ -204,29 +192,13 @@ body {
 
     <div class="container">
 
-        <section id="mainContent">
-
-            <div class="row">
-                <div class="span12 title-bar">
-                    <ul>
-                        <li class="button last">
-                            <div class="control-group warning">
-                                <div class="input-append warning">                        
-                                    <input class="span2 " id="appendedInputButtons" size="16" type="text"><button class="btn btn-warning" type="button"><i class="icon-search icon-white"></i></button><button class="btn btn-warning advanced-search" type="button" data-toggle="button"><i class="icon-filter icon-white"></i></button>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="button"><a class="btn btn-primary" href="#"><i class="icon-plus-sign icon-white"></i> Add new</a></li>
-                        <li class="left"><h1>Settings / Something</h1></li>
-                    </ul>                    
-                </div>            
-            </div>            
+        <section id="mainContent" class="main-content">                       
 
             <div class="row">
                 
                 <div id="sidebar" class="span3">
                     
-                    <div class="well black sidebar-nav">
+                    <div class="well themed sidebar-nav">
                         
                         <ul class="nav nav-list">
                             <li class="nav-header">List header</li>
@@ -244,169 +216,283 @@ body {
 
                 </div><!--/span-->
 
-                <div id="content" class="span9">
+                <div id="content" class="span9">                    
 
-                    <div style="display:none" id="advanced-search-form" class="well">                      
-                      <h3>Search</h3>
-                      <hr/>                      
-                      <form class="">
-                        
+                    <div class="well themed">
+
                         <div class="row-fluid">
-                            
-                            <fieldset class="span6">
-                              <label>Label name</label>
-                              <input type="text" class="span3" placeholder="Type something…">
-                              <span class="help-block">Example block-level help text here.</span>
-                              <label class="checkbox">
-                                <input type="checkbox"> Check me out
-                              </label>
-                            </fieldset>
-                            
-                            <fieldset class="span6">
-                                <label>Label name</label>
-                                  <input type="text" class="span6" placeholder="Type something…">
+                            <div class="span12 title-bar">
+                                <ul>
+                                    <li class="button last">
+                                        <div class="control-group warning">
+                                            <div class="input-append warning">                        
+                                                <input id="appendedInputButtons" size="16" type="text"><button class="btn btn-warning" type="button"><i class="icon-search icon-white"></i></button><button class="btn btn-warning advanced-search" type="button" data-toggle="button"><i class="icon-filter icon-white"></i></button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="button"><a class="btn btn-primary" href="form.html"><i class="icon-plus-sign icon-white"></i> Add new</a></li>
+                                    <li class="left"><h1>Products list</h1></li>
+                                </ul>                    
+                            </div>            
+                        </div> 
+
+                        <div style="display:none" id="advanced-search-form" class="row-fluid advanced-search-form">                      
+                          <h3>Search</h3>                          
+                          <form class="">                            
+                            <div class="row-fluid"> 
+
+                                <fieldset class="span6 search-fieldset">
+                                  <label>Label name</label>
+                                  <input type="text" class="span3" placeholder="Type something…">
                                   <span class="help-block">Example block-level help text here.</span>
                                   <label class="checkbox">
                                     <input type="checkbox"> Check me out
                                   </label>
-                            </fieldset>
-                            <fieldset class="span12">
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                    <button class="btn">Cancel</button>
-                                  </div>
-                            </fieldset>
+                                </fieldset>
+                                
+                                <fieldset class="span6 search-fieldset">
+                                    <label>Label name</label>
+                                      <input type="text" class="span6" placeholder="Type something…">
+                                      <span class="help-block">Example block-level help text here.</span>
+                                      <label class="checkbox">
+                                        <input type="checkbox"> Check me out
+                                      </label>
+                                </fieldset>
+                                <fieldset class="span12 no-margin-left">
+                                    <div class="form-actions">
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <button class="btn">Reset</button>
+                                      </div>
+                                </fieldset>
+                            </div>
+                            
+                          </form>
                         </div>
-                        
-                      </form>
-                    </div>
 
-                    <div class="well">
-
-                        <h1>Products list</h1>
-                        <hr>
-                        <table class="table table-striped">
+                        <form id="bulkActionForm" class="bulk-actions-form">
+                        <table class="table table-bordered">
                         <thead>
                           <tr>
-                            <th>#</th>
+                            <th class="bulk-column">#</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Username</th>
+                            <th class="action-column">Actions</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>1</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Mark</td>
                             <td>Otto</td>
-                            <td>@mdo</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>2</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Jacob</td>
                             <td>Thornton</td>
-                            <td>@fat</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                           <tr>
-                            <td>3</td>
+                            <td><input type="checkbox" name="id" class="bulk-items"></td>
                             <td>Larry</td>
                             <td>the Bird</td>
-                            <td>@twitter</td>
+                            <td class="action-buttons">
+                                <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
+                      </form>
 
-                        <div class="pagination pagination-right">
+                        <div class="row custom-pagination">
+
+                            <div class="inside-spacer">
+
+                                <div class="btn-group bulk-actions">
+                                  <a class="btn btn-primary check-uncheck" href="#"><i class="icon-check icon-white"></i></a>
+                                </div>
+
+                                <div class="btn-group bulk-actions">
+                                  <a class="btn btn-primary" href="#">Action</i></a>
+                                  <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                  <ul class="dropdown-menu">
+                                    <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                                    <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                                    <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>                                    
+                                  </ul>
+                                </div>
+
+                                <div class="btn-group pagination-actions">
+                                    <div class="input-prepend input-append">                        
+                                        <a class="btn btn-info disabled" type="button"><i class="icon-chevron-left icon-white"></i></a><a class="btn btn-info active" type="button">1</a><a class="btn btn-info" type="button">2</a><a class="btn btn-info" type="button"><i class="icon-chevron-right icon-white"></i></a>
+                                    </div>
+                                </div>
+                            
+                            </div>
+
+                        </div>
+
+                        <!-- <div class="pagination pagination-right">
                             <ul>
                                 <li class="disabled"><a href="#">«</a></li>
                                 <li class="active"><a href="#">1</a></li>
@@ -415,7 +501,7 @@ body {
                                 <li><a href="#">4</a></li>
                                 <li><a href="#">»</a></li>
                             </ul>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -426,15 +512,19 @@ body {
         </section>
 
         <footer class="footer">
-            <address>
-                <strong>Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
-                <abbr title="Phone">P:</abbr> (123) 456-7890
-            </address>            
+            <div class="row-fluid">
+                <address class="span6">
+                    <strong>Twitter, Inc.</strong><br>
+                    795 Folsom Ave, Suite 600<br>
+                    San Francisco, CA 94107<br>
+                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                </address>       
+            </div>
         </footer>
 
     </div> <!-- /container -->
+
+    <a href="#" class="toggles"><i class="icon-chevron-left"></i></a>   
 
     <!-- Le javascript
     ================================================== -->
@@ -482,6 +572,46 @@ body {
         //$(this).toggleClass('active');
         $("#advanced-search-form").toggle();
     }); /* end - cancel */
+
+    $('a.toggles').click(function() {
+        
+        $('a.toggles i').toggleClass('icon-chevron-left icon-chevron-right');
+
+        $('#sidebar').animate({
+            width: 'toggle'
+        }, 0);
+
+        $('#content').toggleClass('span12 span9');
+
+    });
+
+    
+    $('a.check-uncheck').live('click', function(e) {
+        e.preventDefault();     
+        var bulkItems = $('#bulkActionForm input.bulk-items');      
+
+        bulkItems.each(function () {
+            if( $('a.check-uncheck i').hasClass('icon-check') ){
+                bulkItems.attr('checked', 'checked');
+                $(this).parents('tr:first').addClass('selected');
+            } else {
+                bulkItems.removeAttr('checked');            
+                $(this).parents('tr:first').removeClass('selected');
+            }
+        });
+        
+        $('a.check-uncheck i').toggleClass('icon-check icon-check-empty');
+    });
+
+    $('input.bulk-items').live('click', function(e) {
+        if($(this).val()){
+            $(this).parents('tr:first').addClass('selected');                    
+        } else {
+            $(this).parents('tr:first').removeClass('selected');                                
+        }
+    });
+    
+    
 
     </script>
 

@@ -233,19 +233,22 @@ body {
                             <strong>Oh snap!</strong> Change a few things up and try submitting again.
                         </div>                        
                       
-                        <div class="well well-form">                            
+                                                   
 
-                            <form class="form-horizontal">
+                            
 
-                                <div class="tabbable">
-                                <ul class="nav nav-tabs">
-                                  <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
-                                  <li><a href="#rB" data-toggle="tab">Section 2</a></li>
-                                  <li><a href="#rC" data-toggle="tab">Section 3</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                  <div class="tab-pane active" id="rA">
-                                    
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs">
+                              <li class="active"><a href="#rA" data-toggle="tab">Products</a></li>
+                              <li><a href="#rB" data-toggle="tab">Products Pictures</a></li>
+                              <li><a href="#rC" data-toggle="tab">Products Something</a></li>
+                            </ul>
+                        <div class="tab-content">
+                            
+                            <div class="tab-pane active" id="rA">
+                            
+                                <div class="well well-form"> 
+                                <form class="form-horizontal">
                                     <div class="inside-spacer">
                                     <fieldset>
                                       <div class="control-group">
@@ -300,26 +303,165 @@ body {
                                           <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
                                         </div>
                                       </div>
+                                    </fieldset>
                                     </div>
-
-                                  </div>
-                                  <div class="tab-pane" id="rB">
-                                    <p>Howdy, I'm in Section B.</p>
-                                  </div>
-                                  <div class="tab-pane" id="rC">
-                                    <p>What up girl, this is Section C.</p>
-                                  </div>
-                                </div>
-                              </div>
-
-
-                                
-                              <div class="form-actions">                                
+                                <div class="form-actions">                                
                                     <button type="submit" class="btn btn-primary">Save changes</button>
                                     <button class="btn">Cancel</button>                                
-                              </div>
-                            </fieldset>
-                          </form>
+                                 </div>
+                                </form>
+
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="rB">
+                                <div class="well well-form">
+                                    <form id="bulkActionForm" class="form-horizontal bulk-actions-form">
+                                    <table class="table table-striped table-condensed">
+                                    <thead>
+                                      <tr>
+                                        <th class="bulk-column">#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th class="action-column">Actions</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>                                      
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td><input type="checkbox" name="id" class="bulk-items"></td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td class="action-buttons">
+                                            <a href="#" class="action-button"><i class="icon-eye-open icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-pencil icon-large"></i></a>
+                                            <a href="#" class="action-button"><i class="icon-trash icon-large"></i></a>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  
+                                  <div class="form-actions tabbed">                                
+
+                                    
+                                    <div class="btn-group bulk-actions">
+                                        <a class="btn btn-warning check-uncheck" href="#"><i class="icon-check-empty icon-white"></i></a>
+                                    </div>
+                                    
+                                    <div class="btn-group dropup bulk-actions">
+                                      <a class="btn btn-warning" href="#">Action</i></a>
+                                      <a class="btn btn-warning dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                                      <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                                        <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                                        <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>                                    
+                                      </ul>
+                                    </div>
+
+                                    <div class="btn-group bulk-actions pull-right">
+                                        <a class="btn btn-primary" data-toggle="modal" href="#add-new"><i class="icon-plus-sign"></i> Add new</a>
+                                    </div> 
+
+                                </div>
+
+                                  </form>
+                                </div>
+                            </div>
+
+                              <div class="tab-pane" id="rC">
+                                <p>What up girl, this is Section C.</p>
+                              </div>                                
+
+                        </div>
 
                         </div>                       
 
@@ -343,6 +485,20 @@ body {
         </footer>
 
     </div> <!-- /container -->
+
+    <div class="modal fade hide" id="add-new">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Modal header</h3>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+    </div>
 
     <a href="#" class="toggles"><i class="icon-chevron-left"></i></a>   
 
@@ -403,6 +559,31 @@ body {
 
         $('#content').toggleClass('span12 span9');
 
+    });
+
+    $('a.check-uncheck').live('click', function(e) {
+        e.preventDefault();     
+        var bulkItems = $('#bulkActionForm input.bulk-items');      
+
+        bulkItems.each(function () {
+            if( $('a.check-uncheck i').hasClass('icon-check-empty') ){
+                bulkItems.attr('checked', 'checked');
+                $(this).parents('tr:first').addClass('selected');
+            } else {
+                bulkItems.removeAttr('checked');            
+                $(this).parents('tr:first').removeClass('selected');
+            }
+        });
+        
+        $('a.check-uncheck i').toggleClass('icon-check-empty icon-check');
+    });
+
+    $('input.bulk-items').live('click', function(e) {
+        if($(this).val()){
+            $(this).parents('tr:first').addClass('selected');                    
+        } else {
+            $(this).parents('tr:first').removeClass('selected');                                
+        }
     });
 
     </script>

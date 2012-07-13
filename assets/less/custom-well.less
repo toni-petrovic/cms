@@ -2,6 +2,10 @@
 @dropdownBackground: rgba(75,75,75,.9);
 @dropdownLinkBackgroundHover: @orange;
 @dropdownLinkColor: @white;
+@tableHeaderColor: #999999;
+@tableRowColor: #ffffff;
+@tableRowSelectedColor: #fcf8e3;
+@tableHoverColor: @blue;
 
 .no-margin{ margin:0px !important; }
 .no-margin-top{ margin-top:0px !important; }
@@ -43,9 +47,60 @@
 	float: right;
 }
 
-.bulk-actions-form .table tr td:first-child, .bulk-actions-form .table tr td:last-child,
-.bulk-actions-form .table tr th:first-child, .bulk-actions-form .table tr th:last-child {	
-		text-align:center;	
+.bulk-actions-form {
+	.table {
+		border: none;
+		background-color:@white;
+		tr{
+			th{
+				background-color:@tableHeaderColor;
+				&.sort{
+					background-color: darken(@tableHeaderColor, 3%);
+					i {
+						float: right;
+					}
+				}				
+			}
+			th:first-child, th:last-child, td:first-child, td:last-child {
+				text-align:center;
+			}
+			th, td {
+				border:none;
+			}			
+			&.selected{
+				td {					
+					background-color: lighten(@tableRowSelectedColor, 2%);			
+					&.sort{
+						background-color: darken(@tableRowSelectedColor, 2%);
+					}	
+				}
+			}
+			td {
+				background-color: lighten(@tableRowColor, 5%);
+				&.sort{
+					background-color: darken(@tableRowColor, 1%);
+				}
+			}			
+		}
+		tr:nth-child(odd) {
+			td.sort{
+				background-color: darken(@tableRowColor, 5%);
+			}
+			&.selected{
+				td {
+					background-color: @tableRowSelectedColor;				
+					&.sort{
+						background-color: darken(@tableRowSelectedColor, 4%);
+					}	
+				}
+			}
+		}	
+		tr:hover{
+			td {
+				background-color: lighten(@tableHoverColor, 50%) !important;
+			}
+		}	
+	}
 }
 
 .theme-black {
@@ -94,7 +149,8 @@
 	}
 	
 	.well {
-		&.themed {				
+		&.themed {
+			background-color: rgb(0,0,0);			
 			background-color: rgba(0,0,0,0.75);
 			margin-bottom: 18px;		
 			.box-shadow(inset 0px 0px 1px rgba(0,0,0,.75));
@@ -177,18 +233,18 @@
 			}
 			/*~~~ Title bar ~~~*/
 
-			/*~~~ Advanced search form ~~~*/
+			/**** Advanced search form ****/
 			.advanced-search-form{
 	    		margin-bottom: 18px;
-	    		background-color: @orange;    		
-	    		.box-shadow(inset 0px 0px 3px rgba(0,0,0,.75));
+	    		background-color: lighten(@orange, 25%);
+	    		.box-shadow(inset 0px 0px 2px rgba(0,0,0,.5));
 	    		.border-radius(4px);   
 
 	    		h3 {
-					background-color:@groundOrange; 
+					background-color: lighten(@orange, 15%);
 					padding: 8px; padding-left:18px;
 					margin-bottom: 8px;
-					.box-shadow(inset 0px 2px 2px rgba(0,0,0,.75));  			
+					.box-shadow(inset 0px 2px 2px rgba(0,0,0,.5));  			
 					.border-radius(4px 4px 0 0); 
 	    		}
 
@@ -203,13 +259,72 @@
 
 	    		.form-actions{
 	    			margin: 0px; margin-top: 8px;
-	    			background-color:@groundOrange;
+	    			background-color: lighten(@orange, 15%);
 	    			border-top: none;
 	    			.border-radius(0 0 4px 4px);
-	    			.box-shadow(inset 0px -2px 2px rgba(0,0,0,.75));  			
+	    			.box-shadow(inset 0px -2px 2px rgba(0,0,0,.5));  			
 	    		} 	
 			}
-			/*~~~ Advanced search form ~~~*/
+			/**** Advanced search form ****/
+
+			/**** Tabs ****/
+
+			.tabbable {
+
+				.nav {
+					.no-margin-bottom;
+				}
+
+				.nav-tabs {
+					border-bottom: none;
+				}
+
+				.nav-tabs > li {
+					a {
+						color: @orange;
+					}
+					a:hover{
+						background-color: transparent;
+						border-color: transparent;
+						text-shadow: 0 0 4px @orange;
+					}
+					&.active a {
+						border: none;
+						border-bottom:2px solid @orange;
+						background-color: whiteSmoke;
+						color: @black;
+					}
+					
+				}
+
+				.tab-content {
+					margin-top: 1px;
+
+					.table{
+						.no-margin-bottom;
+					}
+
+					.form-actions {
+						&.tabbed{
+							padding-left: 20px;
+						}
+						.bulk-actions {
+							&.pull-right{
+								float: right;
+							}
+						}
+					}
+
+				}
+
+				.well-form {
+					.border-radius(0px 0px 4px 4px);
+				}
+
+			}
+
+			/**** Tabs ****/
+
 
 			/*~~~ Pagination ~~~*/			
 				.custom-pagination {
@@ -219,16 +334,7 @@
 				}
 			/*~~~ Pagination ~~~*/			
 
-			.table{
-				background-color:@white;
-				tr {
-					&.selected{
-						td {
-							background-color: @warningBackground;
-						}
-					}
-				}
-			}
+			
 		}
 	}
 
@@ -238,6 +344,7 @@
 		border-top: 1px solid #E5E5E5;
 		address {
 			color: @white;
+			text-shadow: 0px 1px 1px black;
 			margin-bottom: 0px;
 		}	
 	}
